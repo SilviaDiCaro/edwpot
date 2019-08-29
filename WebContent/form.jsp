@@ -27,6 +27,3 @@
     </p>
 </body>
 </html>
-
-<%-- 
-<%@ info aggiuntiva sul documento jsp --%>

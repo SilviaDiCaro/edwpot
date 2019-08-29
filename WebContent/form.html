@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+
+<script type="text/javascript"> /* fa una chiamata al codice JAVA usando AJAX */
+    $(function() {
+    	 $('#btnLoadSrv').click(function() {
+             $('#targetLoadSrv').load('/edwpot/s08/Checker');/* posso anche passargli una servlet che ritorna testo semplice e butta la sua risposta nell'elemento #targetLoadSrv*/
+         });
+    });
+            
+            </script>
+</head>
+<body>
+
+
+	<form action="/edwpot/s08/checker">
+		<div>
+			<label for="name">User:</label> <input type="text" id="name"
+				name="sender">
+		</div>
+		<div>
+			<button type="submit">Go</button>
+		</div>
+	</form>
+
+	<div>
+	        <button id="btnLoadSrv">GET servlet</button>
+            <input id="targetLoadSrv">
+
+	</div>
+
+</body>
+</html>
+

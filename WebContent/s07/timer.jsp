@@ -1,4 +1,4 @@
-<%@ page import="java.time.LocalTime"%>
+<%@ page import="java.time.LocalTime"%> <!-- import di una libreria java (in) -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +9,7 @@
     <h1>
         <%
             out.print(LocalTime.now());
-        %>
+        %> <!-- solo tag di apertura dentro al quale c'è codice java. "out" è la pagina stessa -->
     </h1>
 </body>
 </html>
