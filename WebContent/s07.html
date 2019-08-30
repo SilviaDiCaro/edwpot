@@ -10,17 +10,17 @@
 <script type="text/javascript"> /* fa una chiamata al codice JAVA usando AJAX e non request e response */
     $(function() {
         $('#btnPlain').click(function() {
-            $.ajax({ /* fa una chiamata AJAX al click. Passo oggetto .ajax che ha dentro l'indirizzo e se ha successo prende "data" e lo mette come testo nell'elemento che ha quell'id */
+            $.ajax({ /* fa una chiamata AJAX al click. Passo oggetto .ajax che ha dentro l'indirizzo e se ha successo bw prende "data" e lo mette come testo nell'elemento che ha quell'id */
                 url : "s07.txt", /*$.ajax è come dichiarare l'oggetto xhr */
                 success : function(data) {
-                    $('#targetPlain').text(data);
+                    $('#targetPlain').text(data);//jason, img, pdf (a seconda di cosa arriva rispondo in maniera diversa. Devo sapere il dato che mi deve tornare)
                 }
             })
         })
 
         $('#btnLoad').click(function() {
-            $('#targetLoad').load('s07.txt'); /* funzione load: carica il risultato della get della risorsa indicizzata(targetload) come get lì dentro.c'è una chiamata ad ajax ion load */
-        });
+            $('#targetLoad').load('s07.txt'); /* funzione load: carica il risultato della get della risorsa indicizzata(targetload) come get lì dentro.c'è una chiamata ad ajax in load */
+        });/* se è per testo semplice, mi conviene usare load */
 
         $('#btnLoadSrv').click(function() {
             $('#targetLoadSrv').load('/edwpot/s07/timerPlain');/* posso anche passargli una servlet che ritorna testo semplice e butta la sua risposta nell'elemento #targetLoadSrv*/
@@ -30,8 +30,10 @@
             $.get('/edwpot/s07/timerPlain', function(data) {/*  voglio fare una get di questa risorsa. il risultato va in pasto alla  function(data). fa una chiamata ad ajax. la response la metto in (data) e la gestisco */
                 $('#targetGetSrv').val(data); /* mette il testo dentro una input, è un metodo jquery. scrive nel value associato alla input */
             });/* per paragrafo */
-        });
+        });/* tra '/edwpot/s07/timerPlain' E function(data) posso passare i parametri.
     });  
+    
+   /*  per passare parametri risorsa x?a=1 passando come parametri a=1 oppure uso get e passo parametro distinto*/ 
 </script>
 </head>
 <body>

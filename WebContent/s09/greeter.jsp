@@ -11,7 +11,7 @@
 
     <p>
         <%
-            Duration duration = (Duration) request.getAttribute("duration");
+            Duration duration = (Duration) request.getAttribute("duration"); //vado in req prendo l'attributo request, lo tiro fuori come duration, estraggo i secondi
             out.print("You started working on this stuff " + duration.getSeconds() + " seconds ago");
         %>
     </p>

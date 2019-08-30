@@ -1,5 +1,5 @@
 <%@ page import="java.time.LocalTime"%> <!-- import di una libreria java (in) -->
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
 <meta charset="utf-8">
