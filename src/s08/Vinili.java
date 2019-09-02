@@ -24,7 +24,7 @@ public class Vinili extends HttpServlet {//httpservlet classe astratta che fa ge
     	String Mika = request.getParameter("vinile3"); 
     	String Beatles = request.getParameter("vinile4"); 
     	String RollingStones = request.getParameter("vinile5");
-    //	String Compra = request.getParameter("compra");
+    	
 
     	response.getWriter().println("<html>"); 
     	response.getWriter().println("<head>"); 
@@ -40,7 +40,6 @@ public class Vinili extends HttpServlet {//httpservlet classe astratta che fa ge
     	response.getWriter().println("Numero Vinili Beatles: " + Beatles); 
     	response.getWriter().println("<br>"); 
     	response.getWriter().println("Numero Vinili Rolling Stones: " + RollingStones); 
-    	//response.getWriter().println("Complimenti! Riceverai presto una mail di conferma del tuo ordine" + Compra);
     	response.getWriter().println("</body>"); 
      
     	
@@ -54,6 +53,15 @@ public class Vinili extends HttpServlet {//httpservlet classe astratta che fa ge
         doGet(request, response);
     }
 }
+//<form acrion =/edwpot....
+//<%Integer total = (Integer) request.getAttribute("total");
+//if(total != null && total != 0) {
+//	out.print("hai ordinato" + total)}%>
+//}
+
+
+
+
 //servlet che si aspetta il parametro user. leggo il parametro
 //leggo lo user, lo passo al tree set e metto il risultato come attributo alla request.
 //chiamo dispatcher per passare il lavoro alla jsp

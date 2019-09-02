@@ -8,7 +8,7 @@
 <body>
     <h1>Questions? Ask ${admin}</h1>
 
-    <h1>Ask ${initParam["admin"]}!</h1>
+    <h1>Ask ${initParam["admin"]}!</h1> <!-- accedi initParam admin--> ritorna Tom -->
 
     <a href="..">Back home</a>
 </body>
